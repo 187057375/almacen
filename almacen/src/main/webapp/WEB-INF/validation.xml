@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE form-validation PUBLIC
+          "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN"
+          "http://jakarta.apache.org/commons/dtds/validator_1_1_3.dtd">
+
+<form-validation>
+	<formset>
+		<form name="crearLibroForm">
+			 <field property="libro.nombre" depends="required,maxlength">
+		        <arg0 key="libro.nombre"/>
+		        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+		        <var>
+		        	<var-name>maxlength</var-name>
+		        	<var-value>45</var-value>
+		        </var>
+		    </field>
+		    <field property="libro.nombreOriginal" depends="maxlength">
+		        <arg0 key="libro.nombreOriginal"/>
+		        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+		        <var>
+		        	<var-name>maxlength</var-name>
+		        	<var-value>45</var-value>
+		        </var>
+		    </field>
+		    <field property="libro.autor" depends="required,maxlength">
+		        <arg0 key="libro.autor"/>
+		        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+		        <var>
+		        	<var-name>maxlength</var-name>
+		        	<var-value>45</var-value>
+		        </var>
+		    </field>
+		    <field property="libro.saga" depends="maxlength">
+		        <arg0 key="libro.saga"/>
+		        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+		        <var>
+		        	<var-name>maxlength</var-name>
+		        	<var-value>45</var-value>
+		        </var>
+		    </field>
+		    <field property="libro.paginas" depends="integer, maxlength">
+		        <arg0 key="libro.paginas"/>
+		        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+		        <var>
+		        	<var-name>maxlength</var-name>
+		        	<var-value>45</var-value>
+		        </var>
+		    </field>
+		    <field property="libro.ilustracion" depends="maxlength">
+		        <arg0 key="libro.ilustracion"/>
+		        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+		        <var>
+		        	<var-name>maxlength</var-name>
+		        	<var-value>45</var-value>
+		        </var>
+		    </field>
+		    <field property="libro.disenyo" depends="maxlength">
+		        <arg0 key="libro.disenyo"/>
+		        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+		        <var>
+		        	<var-name>maxlength</var-name>
+		        	<var-value>45</var-value>
+		        </var>
+		    </field>
+		    <field property="libro.traduccion" depends="maxlength">
+		        <arg0 key="libro.traduccion"/>
+		        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+		        <var>
+		        	<var-name>maxlength</var-name>
+		        	<var-value>45</var-value>
+		        </var>
+		    </field>
+		    <field property="libro.editorial" depends="maxlength">
+		        <arg0 key="libro.editorial"/>
+		        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+		        <var>
+		        	<var-name>maxlength</var-name>
+		        	<var-value>45</var-value>
+		        </var>
+		    </field>
+		    <field property="libro.edicion" depends="maxlength">
+		        <arg0 key="libro.edicion"/>
+		        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+		        <var>
+		        	<var-name>maxlength</var-name>
+		        	<var-value>45</var-value>
+		        </var>
+		    </field>
+		    <field property="libro.argumento" depends="maxlength">
+		        <arg0 key="libro.argumento"/>
+		        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+		        <var>
+		        	<var-name>maxlength</var-name>
+		        	<var-value>400</var-value>
+		        </var>
+		    </field>
+		</form>
+	</formset>
+</form-validation>

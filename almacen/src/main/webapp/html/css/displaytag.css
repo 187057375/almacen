@@ -1,0 +1,174 @@
+.displayTable {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.displayTable table {
+	text-align: left;
+	border-spacing: 0px;
+	border: 1px solid #aeb3b6;
+	border-collapse: collapse;
+	
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.displayTable table a,table,tbody,tfoot,tr,th,td {
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 2.0em;
+	font-size: 13px;
+	color: #55595c;
+	
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.sortable th {
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 2.0em;
+	font-size: 13px;
+	color: #55595c;
+	
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.displayTable tbody td {
+	line-height: 2.5em;
+}
+
+.displayTable table caption {
+	padding: .4em 0;
+	font-size: 240%;
+	font-style: normal;
+	color: #FB7E00;
+}
+
+.displayTable table a {
+	display: block;
+	text-decoration: none;
+	color: #FF8E53;
+	padding-right: 1.5em;
+}
+
+.displayTable table a:hover,table a:focus {
+	text-decoration: underline;
+}
+
+.displayTable table th a {
+	color: #FF8E53;
+	text-align: right;
+}
+
+.sortable table th a {
+	color: #FF8E53;
+	text-align: right;
+}
+
+.displayTable table .odd th a,table .odd td a,table .odd td {
+	color: #666;
+	padding-right: 1.0 em;
+}
+
+.sortable table .odd th a,table .odd td a,table .odd td {
+	color: #666;
+	padding-right: 1.0 em;
+}
+
+.displayTable table th a:hover,table th a:focus,tbody tr:hover th {
+	background-color: #FFCC99;
+	color: #fff !important;
+}
+
+.sortable table th a:hover,table th a:focus,tbody tr:hover th {
+	background-color: #FFCC99;
+	color: #fff !important;
+}
+
+.displayTable table .odd th,table .odd td {
+	background-color: #DDDDDD;
+}
+
+.sortable table .odd th,table .odd td {
+	background-color: #DDDDDD;
+}
+
+.displayTable thead th {
+	background-image: url(../img/displayTag/verlauf_schwarz.gif);
+	text-transform: uppercase;
+	font-weight: normal;
+	letter-spacing: 1px;
+	color: #fff;
+	
+	width: 10%;
+	text-align: left;		
+}
+
+.sortable thead th {
+	background-image: url(../img/displayTag/verlauf_schwarz.gif);
+	text-transform: uppercase;
+	font-weight: normal;
+	letter-spacing: 1px;
+	color: #fff;
+	width: 10%;
+}
+
+.displayTable tfoot {
+	background-image: url(../img/displayTag/verlauf_schwarz.gif);
+	border-top: 1px solid #fff;
+}
+
+.displayTable tfoot th,tfoot td {
+	color: #fff;
+}
+
+.sortable tfoot th,tfoot td {
+	color: #fff;
+}
+
+.displayTable tbody th {
+	padding-right: 1.0em;
+	color: #25c1e2;
+	font-style: normal;
+	background-color: #fff;
+	border-bottom: 1px dotted #aeb3b6;
+}
+
+.sortable tbody th {
+	padding-right: 1.0em;
+	color: #25c1e2;
+	font-style: normal;
+	background-color: #fff;
+	border-bottom: 1px dotted #aeb3b6;
+}
+
+.displayTable td {
+	/*color: #FF8E1C;*/
+	color: #4C6699;
+	border-bottom: 1px dotted #aeb3b6;
+	padding-right: 0.5em;
+}
+
+.displayTable tbody tr.odd {
+	border-bottom: 1px dotted #aeb3b6;
+}
+
+.displayTable tbody tr:hover td {
+	/*background-color: #FFCC99;*/
+	background-color: #F5F5F5;
+}
+
+.displayTable tbody tr:hover td,tbody tr:hover th,tbody tr:hover a {
+	/*color: #fff !important;*/
+	color: #4dabe3 !important;
+	
+}
+
+.sortable tbody tr:hover td,tbody tr:hover th,tbody tr:hover a {
+	/*color: #fff !important;*/
+	color: #4dabe3 !important;
+}

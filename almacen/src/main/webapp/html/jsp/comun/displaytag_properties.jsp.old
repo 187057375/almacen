@@ -1,0 +1,12 @@
+<display-el:setProperty name="paging.banner.full"><bean:message key="displaytag.paging.banner.full"/></display-el:setProperty>
+<display-el:setProperty name="paging.banner.first"><bean:message key="displaytag.paging.banner.first"/></display-el:setProperty>
+<display-el:setProperty name="paging.banner.last"><bean:message key="displaytag.paging.banner.last"/></display-el:setProperty>
+<display-el:setProperty name="paging.banner.page.link"><bean:message key="displaytag.banner.page.link"/></display-el:setProperty>
+<display-el:setProperty name="paging.banner.all_items_found"><bean:message key="displaytag.paging.banner.all_items_found"/></display-el:setProperty>
+<display-el:setProperty name="paging.banner.some_items_found"><bean:message key="displaytag.banner.some_items_found"/></display-el:setProperty>
+<display-el:setProperty name="paging.banner.items_name"><bean:message key="displaytag.paging.banner.items_name"/></display-el:setProperty>
+<display-el:setProperty name="paging.banner.item_name"><bean:message key="displaytag.paging.banner.item_name"/></display-el:setProperty>
+<display-el:setProperty name="paging.banner.one_item_found"><bean:message key="displaytag.paging.banner.one_item_found"/></display-el:setProperty>
+<display-el:setProperty name="basic.msg.empty_list"><bean:message key="displaytag.basic.msg.empty_list"/></display-el:setProperty>
+<display-el:setProperty name="basic.msg.empty_list_row"><bean:message key="displaytag.basic.msg.empty_list_row"/></display-el:setProperty>
+<display-el:setProperty name="paging.banner.placement" value="bottom" />

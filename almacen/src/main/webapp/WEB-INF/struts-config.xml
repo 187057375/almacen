@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="buscarCancionForm" type="es.home.almacen.form.BuscarCancionForm" />
+		<form-bean name="crearCancionForm" type="es.home.almacen.form.CrearCancionForm" />
+		<form-bean name="verCancionForm" type="es.home.almacen.form.VerCancionForm" />
+
+		<form-bean name="buscarComponenteForm" type="es.home.almacen.form.BuscarComponenteForm" />
+		<form-bean name="crearComponenteForm" type="es.home.almacen.form.CrearComponenteForm" />
+		<form-bean name="verComponenteForm" type="es.home.almacen.form.VerComponenteForm" />
+
+		<form-bean name="buscarDiscoForm" type="es.home.almacen.form.BuscarDiscoForm" />
+		<form-bean name="crearDiscoForm" type="es.home.almacen.form.CrearDiscoForm" />
+		<form-bean name="verDiscoForm" type="es.home.almacen.form.VerDiscoForm" />
+
+		<form-bean name="buscarGrupoForm" type="es.home.almacen.form.BuscarGrupoForm" />
+		<form-bean name="crearGrupoForm" type="es.home.almacen.form.CrearGrupoForm" />
+		<form-bean name="verGrupoForm" type="es.home.almacen.form.VerGrupoForm" />
+
+		<form-bean name="buscarLibroForm" type="es.home.almacen.form.BuscarLibroForm" />
+		<form-bean name="crearLibroForm" type="es.home.almacen.form.CrearLibroForm" />
+		<form-bean name="verLibroForm" type="es.home.almacen.form.VerLibroForm" />
+
+		<form-bean name="anyadirParticipanteForm" type="es.home.almacen.form.AnyadirParticipanteForm" />
+	</form-beans>
+
+	<global-exceptions>
+
+	</global-exceptions>
+
+	<global-forwards>
+		<forward name="inicio" path="inicio" />
+		<forward name="error" path="error" />
+		<forward name="errorFatal" path="errorFatal" />
+	</global-forwards>
+
+	<action-mappings>
+		<action path="/inicio" forward="inicio" />
+
+		<!-- Wildcards -->
+		<action path="/inicioCrear*" forward="crear{1}" />
+		<action path="/inicioBuscar*" forward="buscar{1}" />
+
+		<action path="/crear*" input="crear{1}" name="crear{1}Form"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="success" path="inicio" />
+		</action>
+
+		<action path="/crear*2P" input="/crear*2P" name="crear{1}Form"
+			scope="request" parameter="method" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="paso1" path="crear{1}" />
+			<forward name="paso2" path="inicio" />
+		</action>
+
+		<action path="/ver*" input="/ver{1}" name="ver{1}Form" scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="success" path="ver{1}" />
+		</action>
+
+		<action path="/modificar*" input="/ver{1}" name="ver{1}Form" scope="request" parameter="method" 
+		type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="paso1" path="ver{1}" />
+			<forward name="paso2" path="inicio" />
+			<forward name="atras" path="buscar{1}" />
+		</action>
+
+		<!-- Actions -->
+		<action path="/anyadirParticipante" type="org.springframework.web.struts.DelegatingActionProxy" input="/anyadirParticipante"
+			parameter="method" name="anyadirParticipanteForm">
+			<forward name="paso1" path="anyadirParticipante" />
+			<forward name="paso2" path="verDisco" />
+		</action>
+		
+		<action path="/buscar*" type="org.springframework.web.struts.DelegatingActionProxy" input="/buscar{1}" name="buscar{1}Form" scope="request">
+			<forward name="success" path="buscar{1}" />
+		</action>
+
+		<action path="/buscar*2P" input="/buscar{1}" name="buscar{1}Form" parameter="method" scope="request" 
+			type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="success" path="buscar{1}" />
+		</action>
+
+	</action-mappings>
+
+	<controller processorClass="org.apache.struts.tiles.TilesRequestProcessor" />
+
+	<message-resources parameter="applicationResource" />
+	
+	<plug-in className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/action-servlet.xml,classpath*:appContextAAD.xml,/WEB-INF/applicationContext.xml" />
+	</plug-in>
+
+	<plug-in className="org.apache.struts.tiles.TilesPlugin">
+		<set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />
+		<set-property property="moduleAware" value="true" />
+	</plug-in>
+
+	<!-- ========================= Validator plugin ================================= -->
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames"
+			value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml" />
+	</plug-in>
+
+</struts-config>

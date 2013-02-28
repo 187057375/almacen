@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+ <!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+
+<!-- This is a blank Tiles definition file with a commented example. -->
+
+<tiles-definitions>
+
+	 <definition name="inicio" page="/html/jsp/tiles/lInicio.jsp">
+		<put name="header" value="/html/jsp/tiles/top.jsp" />
+		<put name="menu" value="/html/jsp/tiles/menu.jsp" />
+		<put name="sidebar" value="/html/jsp/tiles/sidebar.jsp" />
+		<put name="mensajes" value="/html/jsp/comun/mensajes.jsp" />
+		<put name="body" value="/html/jsp/tiles/content.jsp" />
+		<put name="bottom" value="/html/jsp/tiles/bottom.jsp" />
+	</definition>
+	
+	<!-- Cancion -->
+	<definition name="buscarCancion" extends="inicio">
+		<put name="body" value="/html/jsp/buscarCancion.jsp" />
+		<put name="title" type="string" value="Buscar Cancion" />
+	</definition>
+
+	<definition name="crearCancion" extends="inicio">
+		<put name="body" value="/html/jsp/crearCancion.jsp" />
+		<put name="title" type="string" value="Crear Cancion" />
+	</definition>
+	
+	<definition name="verCancion" extends="inicio">
+		<put name="body" value="/html/jsp/verCancion.jsp" />
+		<put name="title" type="string" value="Ver Cancion" />
+	</definition>
+	
+	<!-- Componente -->
+	<definition name="buscarComponente" extends="inicio">
+		<put name="body" value="/html/jsp/buscarComponente.jsp" />
+		<put name="title" type="string" value="Buscar Componente" />
+	</definition>
+
+	<definition name="crearComponente" extends="inicio">
+		<put name="body" value="/html/jsp/crearComponente.jsp" />
+		<put name="title" type="string" value="Crear Componente" />
+	</definition>
+	
+	<definition name="verComponente" extends="inicio">
+		<put name="body" value="/html/jsp/verComponente.jsp" />
+		<put name="title" type="string" value="Ver Componente" />
+	</definition>
+	
+	<!-- Disco -->
+	<definition name="buscarDisco" extends="inicio">
+		<put name="body" value="/html/jsp/buscarDisco.jsp" />
+		<put name="title" type="string" value="Buscar Disco" />
+	</definition>
+
+	<definition name="crearDisco" extends="inicio">
+		<put name="body" value="/html/jsp/crearDisco.jsp" />
+		<put name="title" type="string" value="Crear Disco" />
+	</definition>
+	
+	<definition name="verDisco" extends="inicio">
+		<put name="body" value="/html/jsp/verDisco.jsp" />
+		<put name="title" type="string" value="Ver Disco" />
+	</definition>
+	
+	<!-- Grupo -->
+	<definition name="buscarGrupo" extends="inicio">
+		<put name="body" value="/html/jsp/buscarGrupo.jsp" />
+		<put name="title" type="string" value="Buscar Grupo" />
+	</definition> 
+	
+	<definition name="crearGrupo" extends="inicio">
+		<put name="body" value="/html/jsp/crearGrupo.jsp" />
+		<put name="title" type="string" value="Crear Grupo" />
+	</definition>
+	
+	<definition name="verGrupo" extends="inicio">
+		<put name="body" value="/html/jsp/verGrupo.jsp" />
+		<put name="title" type="string" value="Ver Grupo" />
+	</definition>
+	
+	<!-- Libro -->
+	<definition name="buscarLibro" extends="inicio">
+		<put name="body" value="/html/jsp/buscarLibro.jsp" />
+		<put name="title" type="string" value="Buscar Libro" />
+	</definition>
+
+	<definition name="crearLibro" extends="inicio">
+		<put name="body" value="/html/jsp/crearLibro.jsp" />
+		<put name="title" type="string" value="Crear Libro" />
+	</definition>
+	
+	<!-- Participante -->
+	<definition name="anyadirParticipante" extends="inicio">
+		<put name="body" value="/html/jsp/anyadirParticipante.jsp" />
+		<put name="title" type="string" value="Añadir Participante" />
+	</definition>
+	
+	<!-- GENERAL -->
+	<definition name="verLibro" extends="inicio">
+		<put name="body" value="/html/jsp/verLibro.jsp" />
+		<put name="title" type="string" value="Ver Libro" />
+	</definition>
+
+	<definition name="errorFatal" extends="inicio">
+		<put name="title" type="string" value="Error" />
+		<put name="body" value="/html/jsp/errorFatal.jsp" />
+	</definition>
+	
+
+</tiles-definitions>

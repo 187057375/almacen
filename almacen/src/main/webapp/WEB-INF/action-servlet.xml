@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<!-- Crear en un paso -->
+	<bean name="/crearComponente" scope="prototype" class="es.home.almacen.action.CrearComponenteAction">
+		<property name="business" ref="componenteBOImpl" />
+	</bean>
+
+	<bean name="/crearGrupo" scope="prototype" class="es.home.almacen.action.CrearGrupoAction">
+		<property name="business" ref="grupoBOImpl" />
+	</bean>
+
+	<bean name="/crearLibro" scope="prototype" class="es.home.almacen.action.CrearLibroAction">
+		<property name="business" ref="libroBOImpl" />
+	</bean>
+	
+	<!-- Crear en dos pasos -->
+	<bean name="/crearCancion2P" scope="prototype" class="es.home.almacen.action.CrearCancionAction">
+		<property name="cancionBus" ref="cancionBOImpl" />
+		<property name="discoBus" ref="discoBOImpl" />
+	</bean>
+
+	<bean name="/crearDisco2P" scope="prototype" class="es.home.almacen.action.CrearDiscoAction">
+		<property name="discoBus" ref="discoBOImpl" />
+		<property name="grupoBus" ref="grupoBOImpl" />
+	</bean>
+	
+	<!-- Ver Actions -->
+	<bean name="/verComponente" scope="prototype" class="es.home.almacen.action.VerComponenteAction">
+		<property name="business" ref="componenteBOImpl" />
+	</bean>	
+	
+	<bean name="/verCancion" scope="prototype" class="es.home.almacen.action.VerCancionAction">
+		<property name="cancionBO" ref="cancionBOImpl" />
+		<property name="discoBO" ref="discoBOImpl" />
+	</bean>	
+	
+	<bean name="/verDisco" scope="prototype" class="es.home.almacen.action.VerDiscoAction">
+		<property name="grupoBO" ref="grupoBOImpl" />
+		<property name="discoBO" ref="discoBOImpl" />
+	</bean>	
+	
+	<bean name="/verGrupo" scope="prototype" class="es.home.almacen.action.VerGrupoAction">
+		<property name="grupoBO" ref="grupoBOImpl" />
+	</bean>	
+	
+	<bean name="/verLibro" scope="prototype" class="es.home.almacen.action.VerLibroAction">
+		<property name="libroBO" ref="libroBOImpl" />
+	</bean>
+
+	<!-- Modificar -->
+		
+	<bean name="/modificarComponente" scope="prototype" class="es.home.almacen.action.ModificarComponenteAction">
+		<property name="componenteBO" ref="componenteBOImpl" />
+	</bean>
+	
+	<bean name="/modificarCancion" scope="prototype" class="es.home.almacen.action.ModificarCancionAction">
+		<property name="cancionBO" ref="cancionBOImpl" />
+		<property name="discoBO" ref="discoBOImpl" />
+	</bean>
+	
+	<bean name="/modificarDisco" scope="prototype" class="es.home.almacen.action.ModificarDiscoAction">
+		<property name="grupoBO" ref="grupoBOImpl" />
+		<property name="discoBO" ref="discoBOImpl" />
+	</bean>
+	
+	<bean name="/modificarGrupo" scope="prototype" class="es.home.almacen.action.ModificarGrupoAction">
+		<property name="grupoBO" ref="grupoBOImpl" />
+	</bean>
+
+	<bean name="/modificarLibro" scope="prototype" class="es.home.almacen.action.ModificarLibroAction">
+		<property name="libroBO" ref="libroBOImpl" />
+	</bean>
+
+	<bean name="/anyadirParticipante" scope="prototype" class="es.home.almacen.action.AnyadirParticipanteAction">
+		<property name="componenteBus" ref="componenteBOImpl" />
+		<property name="participanteBus" ref="participanteBOImpl" />
+	</bean>
+	
+	<!-- Buscar Action --> 
+	<bean name="/buscarComponente" scope="prototype" class="es.home.almacen.action.BuscarComponenteAction">
+		<property name="componenteBO" ref="componenteBOImpl" />
+	</bean>
+	
+	<bean name="/buscarCancion2P" scope="prototype" class="es.home.almacen.action.BuscarCancionAction">
+		<property name="cancionBO" ref="cancionBOImpl" />
+		<property name="discoBO" ref="discoBOImpl" />
+	</bean>
+	
+	<bean name="/buscarLibro" scope="prototype" class="es.home.almacen.action.BuscarLibroAction">
+		<property name="libroBO" ref="libroBOImpl" />
+	</bean>
+	
+	<bean name="/buscarGrupo" scope="prototype" class="es.home.almacen.action.BuscarGrupoAction">
+		<property name="grupoBO" ref="grupoBOImpl" />
+	</bean>
+	
+	<bean name="/buscarDisco" scope="prototype" class="es.home.almacen.action.BuscarDiscoAction">
+		<property name="discoBO" ref="discoBOImpl" />
+	</bean>
+
+</beans>
